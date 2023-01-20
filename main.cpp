@@ -3,15 +3,19 @@
 using namespace std;
 int main()
 {
-	srand(time(0));
-	int	a = 1 + rand() % 100;
+	setlocale(0, "");
+	cout << "Guess the number" << endl;
 
-	int	b = 1 + rand() % 100;
-	for (int i = 1; i <= 20; i++)
+	srand(time(0));
+	int a = 1 + rand() % 500;
+
+	int b = 1 + rand() % 500;
+	
+	for (int i = 1; i <= 200; i++)
 	{
 		cout << "Input number" << endl;
 		cin >> a; 
-		if (a > 10 || a < 1)
+		if (a > 500)
 		{
 			cout << endl;
 			cout << "Error";
@@ -22,7 +26,7 @@ int main()
 		else {
 			if (b == a) {
 				cout << "You win";
-				return 0;
+				return 10;
 			}
 			else {
 				cout << " not guess" << endl;
@@ -30,12 +34,14 @@ int main()
 			}
 		}
 	
+		if (a == 0)
+			break;
 	
-	
-	
+		if (b == 0)
+			break;
 	
 	}
-
+	
 
 
 
